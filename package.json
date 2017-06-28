@@ -1,6 +1,6 @@
 {
-  "name": "backend",
-  "version": "0.0.0",
+  "name": "@org.overmind.tictactoe/site",
+  "version": "1.0-SNAPSHOT",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
