@@ -1,0 +1,26 @@
+<h2 class="text-center">Games</h2>
+<div class="col-md-6 col-md-offset-3">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <button class="btn btn-primary btn-block">Create new</button>
+        </div>
+        <div class="panel panel-default">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center">Number</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let game of games; let i = index">
+                    <td class="text-center">{{i}}</td>
+                    <td class="text-center">{{game.name}}</td>
+                    <td class="text-center">{{GameStatus[game.status]}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

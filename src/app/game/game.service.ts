@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Game } from './game.model';
-import { GameCreation } from './game-creation.model';
+import { GameCreation } from './game-creation-dialog/game-creation.model';
 
 @Injectable()
 export class GameService {
