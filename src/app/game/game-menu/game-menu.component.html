@@ -1,0 +1,9 @@
+<h2 class="text-center">Games</h2>
+<div class="col-md-6 col-md-offset-3">
+    <div class="row">
+        <game-creation (created)="onSubmit($event)"></game-creation>
+    </div>
+    <div class="row top10">
+        <game-list [games]="games"></game-list>
+    </div>
+</div>

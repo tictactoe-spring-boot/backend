@@ -1,10 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
-import { GameListComponent } from './game/game-list/game-list.component';
+import { GameMenuComponent } from './game/game-menu/game-menu.component';
 
 const appRoutes: Routes = [
   {
     path: 'menu',
-    component: GameListComponent
+    component: GameMenuComponent
   },
   {
     path: '**',

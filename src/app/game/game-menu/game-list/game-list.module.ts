@@ -8,6 +8,9 @@ import { GameListComponent } from './game-list.component';
   ],
   declarations: [
     GameListComponent
+  ],
+  exports: [
+    GameListComponent
   ]
 })
 export class GameListModule { }

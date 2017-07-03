@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Game } from './game.model';
-import { GameCreation } from './game-creation-dialog/game-creation.model';
+import { GameCreationRequest } from './game-menu/game-creation-dialog/game-creation-request.model';
 
 @Injectable()
 export class GameService {
@@ -18,8 +18,7 @@ export class GameService {
       .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
   }
 
-  create(gameCreation: GameCreation): Observable<Response> {
+  create(gameCreation: GameCreationRequest): Observable<Response> {
     return this.http.post(`${this.baseUrl}`, JSON.stringify(gameCreation));
   }
-
 }

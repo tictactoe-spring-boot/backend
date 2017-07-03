@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th class="col-md-1 text-center">Number</th>
+        <th class="col-md-6 text-center">Name</th>
+        <th class="col-md-3 text-center">Status</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let game of games; let i = index">
+            <td class="text-center">{{i}}</td>
+            <td class="text-center">{{game.name}}</td>
+            <td class="text-center">{{GameStatus[game.status]}}</td>
+        </tr>
+    </tbody>
+</table>

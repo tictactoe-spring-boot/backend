@@ -1,0 +1,28 @@
+<button class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">Create new</button>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title text-center">Create New Game</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <span class="input-group-addon">Game name</span>
+                    <input [(ngModel)]="name" class="form-control" placeholder="Enter name of game">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" (click)="onCreate()" class="btn btn-primary" data-dismiss="modal">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    <span>Create</span>
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    <span>Close</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
