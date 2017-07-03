@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GameCreationRequest } from './game-creation-dialog/game-creation-request.model';
 import { GameService } from '../game.service';
 import { Game } from '../game.model';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './game-menu.component.html'
@@ -9,7 +10,16 @@ import { Game } from '../game.model';
 export class GameMenuComponent implements OnInit {
   games: Game[];
 
-  constructor(private gameService: GameService) { }
+  constructor(
+    private gameService: GameService,
+    private router: Router
+  ) { }
+
+  private updateGameList(): void {
+    this.gameService
+      .findAll()
+      .subscribe(games => this.games = games)
+  }
 
   ngOnInit(): void {
     this.updateGameList();
@@ -21,10 +31,8 @@ export class GameMenuComponent implements OnInit {
       .subscribe(response => this.updateGameList());
   }
 
-  private updateGameList(): void {
-    this.gameService
-      .findAll()
-      .subscribe(games => this.games = games)
+  onGameSelected(game: Game): void {
+    let ignore = this.router.navigate(['/game', game.id]);
   }
 
 }

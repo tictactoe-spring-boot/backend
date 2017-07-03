@@ -1,4 +1,4 @@
-<table class="table table-bordered">
+<table class="table table-bordered table-hover">
     <thead>
     <tr>
         <th class="col-md-1 text-center">Number</th>
@@ -7,10 +7,10 @@
     </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let game of games; let i = index">
+        <tr *ngFor="let game of games; let i = index" (click)="onClick(game)">
             <td class="text-center">{{i}}</td>
             <td class="text-center">{{game.name}}</td>
-            <td class="text-center">{{GameStatus[game.status]}}</td>
+            <td class="text-center table-cell">{{GameStatus[game.status]}}</td>
         </tr>
     </tbody>
 </table>

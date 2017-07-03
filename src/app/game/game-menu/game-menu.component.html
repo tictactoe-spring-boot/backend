@@ -4,6 +4,6 @@
         <game-creation (created)="onSubmit($event)"></game-creation>
     </div>
     <div class="row top10">
-        <game-list [games]="games"></game-list>
+        <game-list [games]="games" (gameSelected)="onGameSelected($event)" ></game-list>
     </div>
 </div>
